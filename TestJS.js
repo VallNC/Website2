@@ -39,6 +39,10 @@ const url = require('url');
 
 //////////////////////////////
 ///////SERVER
+const data = fs.readFileSync('../1-node-farm/starter/dev-data/data.json', 'utf8');
+const dataObj = JSON.parse(data);
+
+
 const server = http.createServer((req, res) => {
     //console.log(req);
     console.log(req.url);
@@ -54,7 +58,9 @@ const server = http.createServer((req, res) => {
     }else
     if(pathName === '/API')
     {
-        res.end('API');
+            res.writeHead(200, {'Content-type': 'application/json'});
+            res.end(data);
+
     }else{
         res.writeHead(404, {'Content-type': 'text/html','my-own-header':'hello-world'});
         res.end('<h1>Page not found  :( </h1> ');
