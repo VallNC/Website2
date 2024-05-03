@@ -42,7 +42,23 @@ const url = require('url');
 const server = http.createServer((req, res) => {
     //console.log(req);
     console.log(req.url);
-    res.end('Hello from the server!!!!');
+    const pathName = req.url;
+    if(pathName === '/'||pathName === '/overview')
+    {
+        res.end('Hello from the overview!!!!');
+    }
+    else
+    if(pathName === '/product')
+    {
+        res.end('Hello from the product!!');
+    }else
+    if(pathName === '/API')
+    {
+        res.end('API');
+    }else{
+        res.writeHead(404, {'Content-type': 'text/html','my-own-header':'hello-world'});
+        res.end('<h1>Page not found  :( </h1> ');
+    }
 })
 
 
