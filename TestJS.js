@@ -67,9 +67,9 @@ const dataObj = JSON.parse(data);
 const server = http.createServer((req, res) => {
     //console.log(req);
     console.log(req.url);
-    const pathName = req.url;
+    const {query, pathname} = (url.parse(req.url, true));
     //////////Overview
-    if(pathName === '/'||pathName === '/overview')
+    if(pathname === '/'||pathname === '/overview')
     {
         //////////Overview
         res.writeHead(200, {'Content-type': 'text/html'});
@@ -78,12 +78,15 @@ const server = http.createServer((req, res) => {
         //console.log(cardHtml);
         res.end(output);
     } else
-    if(pathName === '/product')
+    if(pathname === '/product')
     {
         //////////Product
-        res.end('Hello from the product!!');
+        const product = dataObj[query.id];
+        const output = replaceTemplate(tempProduct,product);
+        console.log(query);
+        res.end(output);
     }else
-    if(pathName === '/API')
+    if(pathname === '/API')
     {
         /////////////////API
             res.writeHead(200, {'Content-type': 'application/json'});
