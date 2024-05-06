@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "Name": "Berthier Mle 1892",
+    "image": "🔫",
+    "SlotSize": "Large",
+    "AmmoType": "Long",
+    "Damage": "130",
+    "price": "356",
+    "description": "The lighter alternative to the Lebel 1886, the Berthier Mle 1892 is a bolt-action mousqueton that doesn't lose power for the sake of its convenience."
+  },
+  {
+    "id": 1,
+    "Name": "Crown & King Auto-5",
+    "image": "🔫",
+    "SlotSize": "Large",
+    "AmmoType": "Buckshot",
+    "Damage": "194",
+    "price": "600",
+    "description": "Prototype long-barreled semi-automatic shotgun with internal four round magazine plus one in the chamber. High power and rate of fire, but strong recoil and short range."
+  },
+  {
+    "id": 2,
+    "Name": "Caldwell Pax",
+    "image": "🔫",
+    "SlotSize": "Small",
+    "AmmoType": "Medium",
+    "Damage": "110",
+    "price": "80",
+    "description": "This iconic single-action six round revolver needs no further introduction. Robust, powerful, and accurate, it brought peace to the once lawless West. This weapon can be dual wielded."
+  },
+  {
+    "id": 3,
+    "Name": "Winfield 1873C Vandal",
+    "image": "🔫",
+    "SlotSize": "Medium",
+    "AmmoType": "Compact",
+    "Damage": "107",
+    "price": "35",
+    "description": "A shortened Winfield M1873C, fires compact bullets at rapid speed."
+  },
+  {
+    "id": 4,
+    "Name": "",
+    "image": "🔫",
+    "SlotSize": "Large",
+    "AmmoType": "Medium",
+    "Damage": "130",
+    "price": "105",
+    "description": "Swiss military, bolt-action carbine with internal magazine. Powerful at medium distances. Reloading is inspired by the Winfield repeater rifle, making it easy to top up ammunition."
+  },
+  {
+    "id": 5,
+    "Name": "Dolch 96",
+    "image": "🔫",
+    "SlotSize": "Small",
+    "AmmoType": "Special",
+    "Damage": "97",
+    "price": "690",
+    "description": "Powerful, German, prototype, semi-automatic pistol with an internal magazine loaded from the top. When fully emptied, it can be reloaded fast with a ten-round stripper clip. This weapon can be dual wielded."
+  }
+]

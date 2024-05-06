@@ -1,6 +1,10 @@
+//Core
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
+//Third-Party
+const slugify = require('slugify');
+//Personal
 const replaceTemplate = require('./Modules/replaceTemplate');
 //Testing
 
@@ -42,12 +46,13 @@ const replaceTemplate = require('./Modules/replaceTemplate');
 ///////SERVER
 
 
-const tempOverview = fs.readFileSync('../1-node-farm/starter/templates/template-overview.html', 'utf8');
-const tempCard = fs.readFileSync('../1-node-farm/starter/templates/template-card.html', 'utf8');
-const tempProduct = fs.readFileSync('../1-node-farm/starter/templates/template-product.html', 'utf8');
+const tempOverview = fs.readFileSync('./1-node-farm/starter/templates/template-overview.html', 'utf8');
+const tempCard = fs.readFileSync('./1-node-farm/starter/templates/template-card.html', 'utf8');
+const tempProduct = fs.readFileSync('./1-node-farm/starter/templates/template-product.html', 'utf8');
 
-const data = fs.readFileSync('../1-node-farm/starter/dev-data/data.json', 'utf8');
+const data = fs.readFileSync('./1-node-farm/starter/dev-data/data.json', 'utf8');
 const dataObj = JSON.parse(data);
+const slugs = dataObj.map(el => slugify(el.productName,{lower: true}));
 
 
 const server = http.createServer((req, res) => {
